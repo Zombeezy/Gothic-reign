@@ -21,6 +21,7 @@ using namespace std;
 //Function Prototypes
 short d20Roll(short a);
 void loot();
+void buffs();
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Set the Random Number seed
@@ -32,7 +33,7 @@ int main(int argc, char** argv) {
     //Output 
     do{
     cout<<"Type 1: D20 Roll"<<endl;
-    cout<<"Type 2: "<<endl;
+    cout<<"Type 2: Enemy Buff Randomizer"<<endl;
     cout<<"Type 3: "<<endl;
     cout<<"Type 4: "<<endl;
     cout<<"Type 5: Wooden Chest"<<endl;
@@ -40,7 +41,7 @@ int main(int argc, char** argv) {
     cout<<"Type 7: Metal Chest"<<endl;
     cout<<"Type 8: Ornate Chest"<<endl;
     cout<<"Type 9: "<<endl;
-    cout<<"Type T: "<<endl;
+    cout<<"Type T: Necronomicon"<<endl;
     //Read the choice
     char choice;
     cin>>choice;
@@ -54,11 +55,19 @@ int main(int argc, char** argv) {
                 result=d20Roll(a);
                 cout<<"Roll total with modifier: "<<result<<endl;
                 cout<<"***********************"<<endl;
+                 cout<<"***********************"<<endl;
                 break;
             }
             case '2':{
                 cout<<"***********************"<<endl;
-                
+                short e=0;
+                cout<<"How many enemies are there?"<<endl;
+                cin>>e;
+                for (e;e>0;e--){
+                    buffs();
+                }
+                cout<<"***********************"<<endl;
+                cout<<"***********************"<<endl;
                 break;
             }
             case '3':{
@@ -84,6 +93,7 @@ int main(int argc, char** argv) {
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
+                 cout<<"***********************"<<endl;
                 break;
             }
             case '6':{//Stone Chest
@@ -103,6 +113,7 @@ int main(int argc, char** argv) {
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
+                 cout<<"***********************"<<endl;
                 break;
             }
             case '7':{//Metal Chest
@@ -127,6 +138,7 @@ int main(int argc, char** argv) {
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
+                 cout<<"***********************"<<endl;
                 break;
             }
             case '8':{//Ornate Chest
@@ -156,6 +168,7 @@ int main(int argc, char** argv) {
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
+                 cout<<"***********************"<<endl;
                 break;
             }
             case '9':{
@@ -187,6 +200,10 @@ int main(int argc, char** argv) {
     
     return 0;
 }
+//****************************************************//
+//                    d20 Roller                      //
+//                                                    //
+//****************************************************//
 short d20Roll(short a){
     char advantage, disadvantage;
     cout<<"Is there an advantage for the roll?"<<endl;
@@ -312,27 +329,27 @@ void loot(){
         }else if(lootRoll==33){
             cout<<"25 Gold pieces"<<endl;
         }else if(lootRoll==34){
-            cout<<"34"<<endl;
+            cout<<"Skeleton Key"<<endl;
         }else if(lootRoll==35){
-            cout<<"35"<<endl;
+            cout<<"Loaded Dice: One time free Re-Roll d20"<<endl;
         }else if(lootRoll==36){
-            cout<<"36"<<endl;
+            cout<<"Loaded Dice: One time free Re-Roll d20"<<endl;
         }else if(lootRoll==37){
-            cout<<"37"<<endl;
+            cout<<"Feast of Meat and Flesh"<<endl;
         }else if(lootRoll==38){
-            cout<<"38"<<endl;
+            cout<<"Friendly Wisp"<<endl;
         }else if(lootRoll==39){
-            cout<<"39"<<endl;
+            cout<<"Castle Guard's Disguise"<<endl;
         }else if(lootRoll==40){
-            cout<<"40"<<endl;
+            cout<<"Town Guard's Disguise"<<endl;
         }else if(lootRoll==41){
-            cout<<"41"<<endl;
+            cout<<"Cardinal's Disguise"<<endl;
         }else if(lootRoll==42){
-            cout<<"42"<<endl;
+            cout<<"Villager's Disguise"<<endl;
         }else if(lootRoll==43){
-            cout<<"43"<<endl;
+            cout<<"A poisoned goblet"<<endl;
         }else if(lootRoll==44){
-            cout<<"44"<<endl;
+            cout<<"Igor's Bell"<<endl;
         }else if(lootRoll==45){
             cout<<"Poe's Pet Raven"<<endl;
         }else{
@@ -357,4 +374,31 @@ void loot(){
         cout<<"Legendary Item: The Necronomicon"<<endl;
     }
     
+}
+//****************************************************//
+//                    Enemy Buffs                     //
+//                                                    //
+//****************************************************//
+void buffs(){
+    short b=0;
+    b=rand()%14+1;
+    if (b<=7){
+        cout<<"Enemy buff: No buff"<<endl;
+    }else if (b==8){
+        cout<<"Enemy buff: Aim for the head. (Extra half damage added to zombie hits)"<<endl;
+    }else if (b==9){
+        cout<<"Enemy buff: Silver Weapons. (Extra half damage added to werewolves hits)"<<endl;
+    }else if (b==10){
+        cout<<"Enemy buff: Garlic Necklace. (Vampires have disadvantage against this enemy)"<<endl;
+    }else if (b==11){
+        cout<<"Enemy buff: Fire Weapons (This enemy has advantage to attacks on mummies)"<<endl;
+    }else if (b==12){
+        cout<<"Enemy buff: Rubber Clothes (This enemy takes no shock/electrical damage)"<<endl;
+    }else if (b==13){
+        cout<<"Enemy buff: Bounty (This enemy will only attack a Psychopath if one is present)"<<endl;
+    }else if (b==14){
+        cout<<"Enemy buff: Holy Water (Apparitions do half damage to this enemy)"<<endl;
+    }else{
+        cout<<"Enemy buff: No buff"<<endl;
+    }
 }
