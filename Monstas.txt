@@ -15,12 +15,12 @@ Mummy - Dead Pharoah             (ranged DPS)
 
 Frankenstein - Bolts and Jolts   (Healer)
 Frankenstein - Gargantuan Grundy (Tank)
-Frankenstein - Woeful Wretch     (DPS)
+Frankenstein - Frankenstein's Bride    (DPS)
 
 Psychopath - Jack the Ripper     (DPS) 
-Psychopath - Dr. JEckyl Mr. Hyde (Tank)
+Psychopath - Dr. Jeckyl Mr. Hyde (Tank)
 Psychopath - Dorian Gray         (Specialist)
 
 Apparition - Banshee             (Specialist)
-Apparition - Lich                (DPS)
-Apparition - Specter             (Healer)
+Apparition - Lich                (Healer)
+Apparition - Dementor             (Dps)
