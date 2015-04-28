@@ -105,7 +105,8 @@ int main(int argc, char** argv) {
                 }else if (flawNum==5){
                     cout<<"IBS: you have to announce to the group that you need to shit after every combat"<<endl;
                 }else if (flawNum==6){
-                    cout<<"Womanizer: you feel the need to use female characters selfishly (even allies)"<<endl;
+                    cout<<"Teacher's Pet: you feel the need to compliment the Dm occasionally."<<endl;
+                    cout<<"I mean he did put a lot of work into this after all."<<endl;
                 }else if (flawNum==7){
                     cout<<"Superstitious: you are terrified of black cats"<<endl;
                 }else if (flawNum==8){
@@ -115,7 +116,7 @@ int main(int argc, char** argv) {
                 }else if (flawNum==10){
                     cout<<"Father Figure: you constantly try to make dad jokes"<<endl;
                 }else if (flawNum==11){
-                    cout<<"Philanthropist: when given the chance you will give away your money graciously"<<endl;
+                    cout<<"Philanthropist: when given the chance, you will give away your money graciously"<<endl;
                 }else if (flawNum==12){
                     cout<<"Antsy: you hate when your group stalls or takes time deciding things."<<endl;
                     cout<<"To calm yourself, you repeatedly sing a nursery rhyme of your choice."<<endl;
@@ -199,12 +200,12 @@ int main(int argc, char** argv) {
                 cin>>playerNum;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 1: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 2: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
@@ -223,17 +224,17 @@ int main(int argc, char** argv) {
                 cin>>playerNum;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 1: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 2: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 3: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
@@ -252,22 +253,22 @@ int main(int argc, char** argv) {
                 cin>>playerNum;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 1: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 2: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 3: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
                 pick=rand()%playerNum+1;
-                cout<<"Loot winner 4: Player "<<pick<<endl;
+                cout<<"Loot winner: Player "<<pick<<endl;
                 loot();
                 cout<<endl;
                 cout<<"***********************"<<endl;
@@ -415,21 +416,21 @@ void loot(){
         }else if(lootRoll==15){
             cout<<"50 silver pieces"<<endl;
         }else if(lootRoll==16){
-            cout<<"One weak health potion"<<endl;
+            cout<<"One weak health potion (regen 2 health)"<<endl;
         }else if(lootRoll==17){
-            cout<<"Two weak health potions"<<endl;
+            cout<<"Two weak health potions (regen 2 health each)"<<endl;
         }else if(lootRoll==18){
-            cout<<"Three weak health potions"<<endl;
+            cout<<"Three weak health potions (regen 2 health each)"<<endl;
         }else if(lootRoll==19){
-            cout<<"Solid Black Cowl"<<endl;
+            cout<<"Solid Black Cowl (aesthetic item)"<<endl;
         }else if(lootRoll==20){
             cout<<"5 torches"<<endl;
         }else if(lootRoll==21){
-            cout<<"Rusty Old Shovel"<<endl;
+            cout<<"Rusty Old Shovel (can be used to dig loose dirt)"<<endl;
         }else if(lootRoll==22){
-            cout<<"A Monk's Robe"<<endl;
+            cout<<"A Monk's Robe (disguise) "<<endl;
         }else if(lootRoll==23){
-            cout<<"A Monk's Robe"<<endl;
+            cout<<"A Monk's Robe (disguise)"<<endl;
         }else if(lootRoll==24){
             cout<<"6 feet of chain link"<<endl;
         }else if(lootRoll==25){
@@ -437,19 +438,19 @@ void loot(){
         }else if(lootRoll==26){
             cout<<"Box of Cheez-Its"<<endl;
         }else if(lootRoll==27){
-            cout<<"Stylish Monocle"<<endl;
+            cout<<"Stylish Monocle (aesthetic item)"<<endl;
         }else if(lootRoll==28){
-            cout<<"Goblet of Blood"<<endl;
+            cout<<"Goblet of Blood (1 time use for vampires: regen 5 health)"<<endl;
         }else if(lootRoll==29){
             cout<<"Case of Incense"<<endl;
         }else if(lootRoll==30){
             cout<<"Potato Sack"<<endl;
         }else{
-            //do nothing
+            cout<<"Your code fucked up"<<endl;
         }
     }
     if(lootRoll>=31&&lootRoll<=45){
-        cout<<"Rare Item: ";
+        cout<<"Uncommon Item: ";
         if(lootRoll==31){
             cout<<"1 Gold piece"<<endl;
         }else if(lootRoll==32){
@@ -493,7 +494,8 @@ void loot(){
         }else if(lootRoll==48){
             cout<<"Death's Approach: You always have max initiative in combat."<<endl;
         }else if(lootRoll==49){
-            cout<<"The Night Mare"<<endl;
+            cout<<"Death's Scythe: +3 to hit"<<endl;
+            cout<<"         melee: 6d6+6"<<endl;
         }else{
             //do nothing
         }

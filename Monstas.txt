@@ -18,7 +18,7 @@ Frankenstein - Gargantuan Grundy (Tank)
 Frankenstein - Frankenstein's Bride    (DPS)
 
 Psychopath - Jack the Ripper     (DPS) 
-Psychopath - Dr. Jeckyl Mr. Hyde (Tank)
+Psychopath - Dr. Jeckyll Mr. Hyde (Tank)
 Psychopath - Dorian Gray         (Specialist)
 
 Apparition - Banshee             (Specialist)
