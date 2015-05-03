@@ -23,6 +23,7 @@ short d20Roll(short a);
 void loot();
 void buffs();
 void regurgitate(short r);
+void shop();
 //Execution Begins Here!
 int main(int argc, char** argv) {
     //Set the Random Number seed
@@ -36,7 +37,7 @@ int main(int argc, char** argv) {
     cout<<"Type 1: D20 Roll"<<endl;
     cout<<"Type 2: Enemy Buff Randomizer"<<endl;
     cout<<"Type 3: Character Flaw"<<endl;
-    cout<<"Type 4: "<<endl;
+    cout<<"Type 4: Underworld Market"<<endl;
     cout<<"Type 5: Wooden Chest"<<endl;
     cout<<"Type 6: Stone Chest"<<endl;
     cout<<"Type 7: Metal Chest"<<endl;
@@ -54,6 +55,7 @@ int main(int argc, char** argv) {
 //****************************************************//
             case '1':{
                 cout<<"***********************"<<endl;
+                cout<<"***********************"<<endl;
                 short a, result;
                 cout<<"Please add the modifier for the roll:"<<endl;
                 cin>>a;
@@ -68,6 +70,7 @@ int main(int argc, char** argv) {
 //                                                    //
 //****************************************************//
             case '2':{
+                cout<<"***********************"<<endl;
                 cout<<"***********************"<<endl;
                 short e=0;
                 cout<<"How many enemies are there?"<<endl;
@@ -87,6 +90,7 @@ int main(int argc, char** argv) {
                 char reflaw;
                 char ready;
                 short flawNum;
+                cout<<"***********************"<<endl;
                 cout<<"***********************"<<endl;
                 cout<<"Ready for your character flaw?"<<endl;
                 cout<<"Type Y when ready:"<<endl;
@@ -160,12 +164,18 @@ int main(int argc, char** argv) {
                 break;
             }
 //****************************************************//
-//                    Case 4                          //
+//                    Underworld Market               //
 //                                                    //
 //****************************************************//
             case '4':{
                 cout<<"***********************"<<endl;
-                
+                cout<<"***********************"<<endl;
+                cout<<"Welcome to the Underworld Market"<<endl;
+                cout<<"Have a look at our wares:"<<endl;
+                cout<<endl;
+                shop();
+                cout<<"***********************"<<endl;
+                cout<<"***********************"<<endl;
                 break;
             }
 //****************************************************//
@@ -173,6 +183,7 @@ int main(int argc, char** argv) {
 //                                                    //
 //****************************************************//
             case '5':{//Wooden Chest
+                cout<<"***********************"<<endl;
                 cout<<"***********************"<<endl;
                 short playerNum, pick;
                 cout<<"Please first assign a number to each player."<<endl;
@@ -193,6 +204,7 @@ int main(int argc, char** argv) {
 //                                                    //
 //****************************************************//
             case '6':{//Stone Chest
+                cout<<"***********************"<<endl;
                 cout<<"***********************"<<endl;
                 short playerNum, pick;
                 cout<<"Please first assign a number to each player."<<endl;
@@ -217,6 +229,7 @@ int main(int argc, char** argv) {
 //                                                    //
 //****************************************************//
             case '7':{//Metal Chest
+                cout<<"***********************"<<endl;
                 cout<<"***********************"<<endl;
                 short playerNum, pick;
                 cout<<"Please first assign a number to each player."<<endl;
@@ -246,6 +259,7 @@ int main(int argc, char** argv) {
 //                                                    //
 //****************************************************//
             case '8':{//Ornate Chest
+                cout<<"***********************"<<endl;
                 cout<<"***********************"<<endl;
                 short playerNum, pick;
                 cout<<"Please first assign a number to each player."<<endl;
@@ -283,6 +297,7 @@ int main(int argc, char** argv) {
                 char regCho;
                 short regurge;
                 cout<<"***********************"<<endl;
+                cout<<"***********************"<<endl;
                 cout<<"Would you like to cast this on yourself, an ally, or an enemy:"<<endl;
                 cout<<"Type either (A,E,Y):"<<endl;
                 cin>>regCho;
@@ -308,7 +323,10 @@ int main(int argc, char** argv) {
             case 't':
             case 'T':{
                 cout<<"***********************"<<endl;
+                cout<<"***********************"<<endl;
                
+                cout<<"***********************"<<endl;
+                cout<<"***********************"<<endl;
                 break;
             }
             default:{
@@ -379,128 +397,138 @@ short d20Roll(short a){
 //                                                    //
 //****************************************************//
 void loot(){
-    short lootRoll=rand()%50+1;
-    if(lootRoll==0){
+    short lootRoll=rand()%100+1;
+    if(lootRoll==1){
         cout<<"You find nothing in the chest but your crushed hopes"<<endl;
     }
-    if(lootRoll>=0&&lootRoll<=30){
+    if(lootRoll>1&&lootRoll<=60){
+        int reRoll=rand()%30+1;
         cout<<"Common Item: ";
-        if(lootRoll==1){
+        if(reRoll==1){
             cout<<"5 copper pieces"<<endl;
-        }else if(lootRoll==2){
+        }else if(reRoll==2){
             cout<<"10 copper pieces"<<endl;
-        }else if(lootRoll==3){
+        }else if(reRoll==3){
             cout<<"15 copper pieces"<<endl;
-        }else if(lootRoll==4){
+        }else if(reRoll==4){
             cout<<"25 copper pieces"<<endl;
-        }else if(lootRoll==5){
+        }else if(reRoll==5){
             cout<<"50 copper pieces"<<endl;
-        }else if(lootRoll==6){
+        }else if(reRoll==6){
             cout<<"1 silver piece"<<endl;
-        }else if(lootRoll==7){
+        }else if(reRoll==7){
             cout<<"5 silver pieces"<<endl;
-        }else if(lootRoll==8){
+        }else if(reRoll==8){
             cout<<"10 silver pieces"<<endl;
-        }else if(lootRoll==9){
+        }else if(reRoll==9){
             cout<<"15 silver pieces"<<endl;
-        }else if(lootRoll==10){
+        }else if(reRoll==10){
             cout<<"20 silver pieces"<<endl;
-        }else if(lootRoll==11){
+        }else if(reRoll==11){
             cout<<"25 silver pieces"<<endl;
-        }else if(lootRoll==12){
+        }else if(reRoll==12){
             cout<<"30 silver pieces"<<endl;
-        }else if(lootRoll==13){
+        }else if(reRoll==13){
             cout<<"35 silver pieces"<<endl;
-        }else if(lootRoll==14){
+        }else if(reRoll==14){
             cout<<"40 silver pieces"<<endl;
-        }else if(lootRoll==15){
+        }else if(reRoll==15){
             cout<<"50 silver pieces"<<endl;
-        }else if(lootRoll==16){
+        }else if(reRoll==16){
             cout<<"One weak health potion (regen 2 health)"<<endl;
-        }else if(lootRoll==17){
+        }else if(reRoll==17){
             cout<<"Two weak health potions (regen 2 health each)"<<endl;
-        }else if(lootRoll==18){
+        }else if(reRoll==18){
             cout<<"Three weak health potions (regen 2 health each)"<<endl;
-        }else if(lootRoll==19){
+        }else if(reRoll==19){
             cout<<"Solid Black Cowl (aesthetic item)"<<endl;
-        }else if(lootRoll==20){
+        }else if(reRoll==20){
             cout<<"5 torches"<<endl;
-        }else if(lootRoll==21){
+        }else if(reRoll==21){
             cout<<"Rusty Old Shovel (can be used to dig loose dirt)"<<endl;
-        }else if(lootRoll==22){
+        }else if(reRoll==22){
             cout<<"A Monk's Robe (disguise) "<<endl;
-        }else if(lootRoll==23){
+        }else if(reRoll==23){
             cout<<"A Monk's Robe (disguise)"<<endl;
-        }else if(lootRoll==24){
+        }else if(reRoll==24){
             cout<<"6 feet of chain link"<<endl;
-        }else if(lootRoll==25){
+        }else if(reRoll==25){
             cout<<"8 feet of rope"<<endl;
-        }else if(lootRoll==26){
+        }else if(reRoll==26){
             cout<<"Box of Cheez-Its"<<endl;
-        }else if(lootRoll==27){
+        }else if(reRoll==27){
             cout<<"Stylish Monocle (aesthetic item)"<<endl;
-        }else if(lootRoll==28){
+        }else if(reRoll==28){
             cout<<"Goblet of Blood (1 time use for vampires: regen 5 health)"<<endl;
-        }else if(lootRoll==29){
-            cout<<"Case of Incense"<<endl;
-        }else if(lootRoll==30){
+        }else if(reRoll==29){
+            cout<<"Hangman's Noose"<<endl;
+        }else if(reRoll==30){
             cout<<"Potato Sack"<<endl;
         }else{
-            cout<<"Your code fucked up"<<endl;
+            cout<<"Your code fucked up (common loot roll)"<<endl;
         }
     }
-    if(lootRoll>=31&&lootRoll<=45){
+    if(lootRoll>60&&lootRoll<=94){
+        int reRoll=rand()%15+1;
         cout<<"Uncommon Item: ";
-        if(lootRoll==31){
+        if(reRoll==1){
             cout<<"1 Gold piece"<<endl;
-        }else if(lootRoll==32){
+        }else if(reRoll==2){
             cout<<"5 Gold pieces"<<endl;
-        }else if(lootRoll==33){
+        }else if(reRoll==3){
             cout<<"25 Gold pieces"<<endl;
-        }else if(lootRoll==34){
+        }else if(reRoll==4){
             cout<<"Skeleton Key"<<endl;
-        }else if(lootRoll==35){
+        }else if(reRoll==5){
             cout<<"Loaded Dice: One time free Re-Roll d20"<<endl;
-        }else if(lootRoll==36){
+        }else if(reRoll==6){
             cout<<"Loaded Dice: One time free Re-Roll d20"<<endl;
-        }else if(lootRoll==37){
+        }else if(reRoll==7){
             cout<<"Feast of Meat and Flesh"<<endl;
-        }else if(lootRoll==38){
+        }else if(reRoll==8){
             cout<<"Friendly Wisp"<<endl;
-        }else if(lootRoll==39){
+        }else if(reRoll==9){
             cout<<"Castle Guard's Disguise"<<endl;
-        }else if(lootRoll==40){
+        }else if(reRoll==10){
             cout<<"Town Guard's Disguise"<<endl;
-        }else if(lootRoll==41){
+        }else if(reRoll==11){
             cout<<"Cardinal's Disguise"<<endl;
-        }else if(lootRoll==42){
+        }else if(reRoll==12){
             cout<<"Villager's Disguise"<<endl;
-        }else if(lootRoll==43){
+        }else if(reRoll==13){
             cout<<"A poison bead and goblet"<<endl;
-        }else if(lootRoll==44){
+        }else if(reRoll==14){
             cout<<"Igor's Bell"<<endl;
-        }else if(lootRoll==45){
+        }else if(reRoll==15){
             cout<<"Poe's Pet Raven"<<endl;
+        }else if(reRoll==16){
+            cout<<"Black Bead: Creates a portal to the Underworld Market (one time use)"<<endl;
         }else{
-            //do nothing
+            cout<<"Your code is fucked (uncommon loot roll)"<<endl;
         }
     }
-    if(lootRoll>=46&&lootRoll<=49){
+    if(lootRoll>94&&lootRoll<=99){
+         int reRoll=rand()%6+1;
         cout<<"Epic Item: ";
-        if(lootRoll==46){
+        if(reRoll==1){
             cout<<"100 Gold"<<endl;
-        }else if(lootRoll==47){
+        }else if(reRoll==2){
             cout<<"Heart of Lazarus: One time resurrection from death "<<endl;
-        }else if(lootRoll==48){
+        }else if(reRoll==3){
             cout<<"Death's Approach: You always have max initiative in combat."<<endl;
-        }else if(lootRoll==49){
+        }else if(reRoll==4){
             cout<<"Death's Scythe: +3 to hit"<<endl;
             cout<<"         melee: 6d6+6"<<endl;
+        }else if(reRoll==5){
+            cout<<"Dracula's Gift"<<endl;
+        }else if(reRoll==6){
+            cout<<"Black Mirror: (Reusable Item)"<<endl;
+            cout<<"Opens a portal to the Underworld Market"<<endl;
         }else{
-            //do nothing
+            cout<<"Your code is fucked (epic loot roll)"<<endl;
         }
     }
-    if(lootRoll==50){
+    if(lootRoll==100){
         cout<<"Legendary Item: The Necronomicon"<<endl;
     }
     
@@ -569,6 +597,93 @@ void regurgitate(short r){
     }else if(num==15){
         cout<<"Your own stomach. You lose 15 health."<<endl;
     }else {
-        cout<<"Check for fuck up"<<endl;
+        cout<<"Your code fucked up (Regurgitate function)"<<endl;
+    }
+}
+//****************************************************//
+//                    Shop Function                   //
+//                                                    //
+//****************************************************//
+void shop(){
+    for(int i=0;i<3;i++){
+    short commonItem=rand()%10+1;
+    short stock=rand()%5+1;
+    if(commonItem==1){
+        cout<<"-Weak health potion (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: 1 silver piece"<<endl;
+    }else if (commonItem==2){
+        cout<<"-Small Dagger (stock: "<<stock<<" in store)"<<endl;
+        cout<<"    :1d4"<<endl;
+        cout<<" Price: 50 copper pieces"<<endl;
+    }else if (commonItem==3){
+        cout<<"-Overcoat (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: 50 copper pieces"<<endl;
+    }else if (commonItem==4){
+        cout<<"-Rusty old Shovel (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: 50 silver pieces"<<endl;
+    }else if (commonItem==5){
+        cout<<"-8 feet of robe (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: 25 silver pieces"<<endl;
+    }else if (commonItem==6){
+        cout<<"-Solid Black Cowl-aesthetic item (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: 15 silver pieces"<<endl;
+    }else if (commonItem==7){
+        cout<<"-Torch (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: 5 copper pieces"<<endl;
+    }else if (commonItem==8){
+        cout<<"-Monk's Robe (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: 15 silver pieces "<<endl;
+    }else if (commonItem==9){
+        cout<<"-Common Item (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: "<<endl;
+    }else if (commonItem==10){
+        cout<<"-Common Item (stock: "<<stock<<" in store)"<<endl;
+        cout<<" Price: "<<endl;
+    }else{
+        cout<<"Your code fucked up (common item in store roll)"<<endl;
+    }
+    cout<<endl;
+    }
+    short specialItem=rand()%10+1;
+    if(specialItem<=8){
+        short uncommonItem=rand()%5+1;
+        if(uncommonItem==1){
+        cout<<"-Igor's Bell"<<endl;
+        cout<<" Price: "<<endl;
+        }else if(uncommonItem==2){
+        cout<<"-Loaded Dice (one time free reroll d20)"<<endl;
+        cout<<" Price: "<<endl;
+        }else if(uncommonItem==3){
+        cout<<"-Strong Health Potion"<<endl;
+        cout<<" Price: "<<endl;
+        }else if(uncommonItem==4){
+        cout<<"-Uncommon Item"<<endl;
+        cout<<" Price: "<<endl;
+        }else if(uncommonItem==5){
+        cout<<"-Town Guard's Disguise"<<endl;
+        cout<<" Price: "<<endl;
+        }else{
+            cout<<"Your code fucked up (uncommon item in store roll)"<<endl;
+        }
+    }else if(specialItem>9){
+        short rareItem=rand()%5+1;
+        if(rareItem==1){
+        cout<<"-Dark Mantle (+2 Toughness)"<<endl;
+        cout<<" Price: "<<endl;
+        }else if(rareItem==2){
+        cout<<"-A Mysterious Portrait"<<endl;
+        cout<<" Price: "<<endl;
+        }else if(rareItem==3){
+        cout<<"-Castle Guard's Disguise"<<endl;
+        cout<<" Price: "<<endl;
+        }else if(rareItem==4){
+        cout<<"-Goblet and a bead of poison"<<endl;
+        cout<<" Price: "<<endl;
+        }else if(rareItem==5){
+        cout<<"-Heart of Lazarus: One time resurrection from death"<<endl;
+        cout<<" Price: 100 gold (one in stock)"<<endl;
+        }
+    }else{
+        cout<<"Your code fucked up(special item roll in shop)"<<endl;
     }
 }
